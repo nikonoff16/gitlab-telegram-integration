@@ -23,7 +23,7 @@ public class Syncer {
     public void updateMergeRequests() {
         final Collection<MergeRequestInfo> mergeRequests = gitLabClient.
                 getMergeRequests(applicationConfiguration.getGitLabPrivateToken());
-
+        gitLabClient.getCurrentUserInfo(applicationConfiguration.getGitLabPrivateToken());
 
         log.info("mergeRequests");
     }
